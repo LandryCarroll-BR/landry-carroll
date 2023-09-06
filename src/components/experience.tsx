@@ -65,7 +65,10 @@ export const Experience: React.FC<ExperienceProps> = ({ className }) => {
     <div className={cn(className, 'flex flex-col')}>
       {WorkEntries.map((WorkEntry) => {
         return (
-          <div key={WorkEntry.employer} className="flex gap-4">
+          <div
+            key={WorkEntry.employer}
+            className="flex gap-4 border border-transparent hover:border-border p-4 pt-5 rounded-md group transition hover:bg-foreground/[.02]"
+          >
             <div className="text-sm mt-3 text-foreground/60 w-28 justify-end pr-1 hidden lg:flex">
               {WorkEntry.timeSpan}
             </div>
@@ -75,8 +78,8 @@ export const Experience: React.FC<ExperienceProps> = ({ className }) => {
                 <WorkEntry.logo />
               </div>
 
-              <div className="h-full w-full flex items-center justify-center pt-4 pb-16">
-                <div className="bg-border w-px h-full"></div>
+              <div className="h-full w-full flex items-start justify-center pt-9 pb-12">
+                <div className="bg-border w-px h-[100%]"></div>
               </div>
             </div>
 
@@ -88,7 +91,7 @@ export const Experience: React.FC<ExperienceProps> = ({ className }) => {
                 >
                   <h3 className="text-2xl">
                     {WorkEntry.employer}
-                    <ExternalLinkIcon className="inline ml-1 h-4 w-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                    <ExternalLinkIcon className="inline ml-1 h-4 w-4 " />
                   </h3>
                 </Link>
 
@@ -113,7 +116,7 @@ export const Experience: React.FC<ExperienceProps> = ({ className }) => {
         )
       })}
 
-      <div className="flex gap-4 w-full">
+      <div className="flex gap-4 w-full p-4 pt-5">
         <div className="text-sm mt-3 text-foreground/60 justify-end pr-1 w-28 hidden lg:flex">
           {'2020'}
         </div>

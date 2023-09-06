@@ -14,7 +14,7 @@ export default function Home() {
     <main className="">
       <Header />
 
-      <section className="h-[60vh] flex items-center justify-center">
+      <section className="h-[60vh] flex items-center justify-center py-16">
         <div className="container flex md:items-center items-start justify-center gap-8 md:flex-row flex-col">
           <div className="mix-blend-luminosity w-20 md:w-fit">
             <Image
@@ -42,7 +42,7 @@ export default function Home() {
                 <GitHubLogoIcon />
               </Link>
               <Link
-                href="#"
+                href="#projects"
                 className={cn(
                   buttonVariants({ size: 'lg', variant: 'outline' })
                 )}
@@ -88,7 +88,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-screen my-16">
+      <section id="projects" className="h-screen py-16">
         <div className="container">
           <h2 className="text-2xl mb-8">Projects</h2>
 

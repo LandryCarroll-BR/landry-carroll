@@ -11,7 +11,7 @@ const navLinks: NavLink[] = [
     isButton: false,
   },
   {
-    url: '#',
+    url: '#projects',
     title: 'Projects',
     isButton: false,
   },
